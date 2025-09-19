@@ -13,5 +13,21 @@
             <p class="subtitle">Interactive Animation Experience</p>
         </header>
 
+        <main class="main">
+            <canvas id="particleCanvas" class="canvas"></canvas>
+         <div class="controls">
+                <button id="pause" class="button">Pause</button>
+                <button id="reset" class="button">Reset</button>
+                <div class="slider-container">
+                    <label for="speedSlider">Speed:</label>
+                    <input type="range" id="speedSlider" min="0.1" max="3" step="0.1" value="1">
+         </div>
+        </main>
+                
+        <footer class="footer">
+            <p>Move your mouse to interact with the particles</p>
+        </footer>
+</div>
+<script src="app.js"></script>
 </body>
 </html>

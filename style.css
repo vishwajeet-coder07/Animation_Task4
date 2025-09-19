@@ -14,16 +14,66 @@ body {
 
 .container {
     position: relative;
+    /* relative is used to position child elements absolutely within this container */
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .header {
     position: absolute;
+    /* Positioning the header absolutely within the container */
     top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
     z-index: 10;
+}
+.main{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    z-index: 10;
+}
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+.controls {
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;   
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3sec ease;
+    width: 50px;
+    height: 40px;
+}
+.button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
