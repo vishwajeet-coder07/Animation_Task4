@@ -1,4 +1,4 @@
-let canvas = document.querySelector('canvas');
+let canvas; 
 let ctx;
 let particles = [];
 let mouse = { x: 0, y: 0 };
@@ -12,7 +12,7 @@ function resizeCanvas() {
 
 function createParticles() {
     particles = [];
-    const particleCount = Math.floor((canvas.width * canvas.height) / 8000);
+    const particleCount = Math.floor(Math.random()*100 + 100);
     for (let i = 0; i < particleCount; i++) {
         particles.push({
             x: Math.random() * canvas.width,
@@ -121,10 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
         createParticles();
     });
 
+    
     const pauseButton = document.getElementById('pause');
     if (pauseButton) pauseButton.addEventListener('click', togglePause);
 
-    const resetButton = document.getElementById('resetBtn');
+    const resetButton = document.getElementById('reset');
     if (resetButton) resetButton.addEventListener('click', reset);
 
     const speedSlider = document.getElementById('speedSlider');
