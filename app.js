@@ -22,7 +22,8 @@ function createParticles() {
             size: Math.random() * 2 + 1,
             opacity: Math.random() * 0.5 + 0.2,
             hue: Math.random() * 360,
-            pulse: Math.random() * Math.PI * 2
+            pulse: Math.random() * Math.PI * 2 
+            //pulse phase for pulsing effect this means each particle will have a different starting point in its pulse cycle
         });
     }
 }
